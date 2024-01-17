@@ -28,10 +28,10 @@ public with sharing class FlowControlLoopsCollections {
      * @return "Hello World!" if x greater than y, otherwise return null.
      */
     public static String helloWorld(Integer x, Integer y) {  
-        if(x > y ){
-           return 'Hello World!';
+        if(x == null || y == null || x <= y){
+           return null;
         } else{
-            return null;
+            return 'Hello World!';
         }
     }
 
@@ -64,11 +64,11 @@ public with sharing class FlowControlLoopsCollections {
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
         Integer largestNum = null;
-        if(num1!= null && num2!= null){
-            largestNum = math.max(num1,num2);
+        if(num1 == null || num2 == null){
             return largestNum;
         }
         else{
+            largestNum = math.max(num1,num2);
             return largestNum;
         }
     }
